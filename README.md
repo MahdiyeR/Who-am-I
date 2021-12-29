@@ -2,7 +2,9 @@
 ## Project Title: Mobile App Store
 
 An App store for searching applications.
- 
+
+ ![@App-Screenshot]( https://github.com/MahdiyeR/Who-am-I/blob/Main/2.JPG)
+
 
 ## Badges
 
@@ -12,7 +14,7 @@ An App store for searching applications.
 
 ## Datasets
 
-Datasets are from:[Kaggle Mobile App Store Dataset](https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps)
+Datasets are from: [Kaggle Mobile App Store Dataset](https://www.kaggle.com/ramamet4/app-store-apple-data-set-10k-apps)
 
 
 ## Motivation
