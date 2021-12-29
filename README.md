@@ -11,10 +11,6 @@ An App store for searching applications.
 [![Database](https://img.shields.io/badge/license-MSSMS-yellow.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
 
-## Mobile App Store
-
-[App Screenshot](https://github.com/MahdiyeR/Who-am-I/blob/Frond-End/1.JPG)
-
 ## Motivation
 I started this project just because it was my software engineering course project. (I'm really a honest person 😊)
 
