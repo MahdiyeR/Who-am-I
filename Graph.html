@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-compatible" content="ie=edge" />
+    <title>Fetch and Graph CSV</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+  </head>
+  <body>
+      <canvas id="chart" width="800" height="400"></canvas>
+      <script> 
+        chartIt();
+        async function chartIt() {
+            const data = await getData();
+            const ctx = document.getElementById('Chart').getContext('2d');
+            const mychart = new Chart(ctx, {
+                type: 'Line',
+                data: {
+                    labels: data.xs,
+                    datasets: [
+                        {
+                        label: 'Global rating',
+                        data: data.ys,
+                        fill: false,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                        }
+           
+            ]
+         }
+        });
+    }
+    /*
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+                */
+        
+    //Dta from: 
+
+    async function  getData() {
+        const xs = [];
+        const ys = [];
+
+        const response = await fetch('AppleStoreDB.csv');
+        const data = await response.text();
+
+        const table = data.split('\n').slice(1);
+        table.forEach(row => {
+            const columns = row.split(',');
+            const year =clumns[0];
+            xs.push(year);
+            const temp = columns[1];
+            ys.push(parseFloat(temp) +14);
+            console.log(year, temp);
+        });
+        return { xs, ys };
+    }
+    </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
